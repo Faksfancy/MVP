@@ -1,0 +1,16 @@
+{
+  "name": "meal-magic",
+  "version": "1.0.0",
+  "description": "a recipe application",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Fakolujo micheal & Ebenezer Akinseinde",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.0",
+    "sass": "^1.26.10"
+  }
+}
