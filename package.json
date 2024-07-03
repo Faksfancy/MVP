@@ -2,7 +2,7 @@
   "name": "meal-magic",
   "version": "1.0.0",
   "description": "a recipe application",
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
@@ -10,7 +10,12 @@
   "author": "Fakolujo micheal & Ebenezer Akinseinde",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.0.0",
-    "sass": "^1.26.10"
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.24.7",
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "sass": "^1.77.6"
   }
 }
