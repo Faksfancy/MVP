@@ -4,22 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="search for over 1,000,000 recipes" />
+    <meta property="og:title" content="Meal-Magic" />
+    <meta
+      property="og:description"
+      content="Meal-Magic is a recipe searching website where you can discover delicious food combinations with your ingredients!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="src/img/logo2.png" />
+    <meta property="og:url" content="https://meal-magic.netlify.app" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+   
 
     <link rel="stylesheet" href="src/sass/main.scss" />
     <script defer src="src/js/controller.js" type="module"></script>
 
-    <title>forkify // Search over 1,000,000 recipes</title>
+    <title>Meal-Magic // Search over 1,000,000 recipes</title>
   </head>
 
   <body>
     <div class="container">
       <header class="header">
-        <img src="src/img/logo.png" alt="Logo" class="header__logo" />
+        <img src="src/img/mm1.jpg" alt="Logo" class="header__logo" />
         <form class="search">
           <input
             type="text"
@@ -36,10 +46,33 @@
 
         <nav class="nav">
           <ul class="nav__list">
+            <li class="nav_item">
+              <button class="nav__btn nav__btn--shoplist">
+                <svg class="nav__icon">
+                  <use href="src/img/icons.svg#icon-edit"></use>
+                </svg>
+                <span>Shopping list</span>
+              </button>
+              <div class="shoplist">
+                <ul class="shoplist__list">
+                  <div class="message">
+                    <div>
+                      <svg>
+                        <use href="src/img/icons.svg#icon-smile"></use>
+                      </svg>
+                    </div>
+                    <p>No shopping list yet. Find a nice recipe :)</p>
+                  </div>
+                  <!-- <ol class="shoplist__order">
+
+                  </ol> -->
+                </ul>
+              </div>
+            </li>
             <li class="nav__item">
               <button class="nav__btn nav__btn--add-recipe">
                 <svg class="nav__icon">
-                  <use href="src/img/icons.svg#icon-edit"></use>
+                  <use href="src/img/icons.svg#icon-upload-cloud"></use>
                 </svg>
                 <span>Add recipe</span>
               </button>
@@ -126,10 +159,14 @@
           <a
             class="twitter-link"
             target="_blank"
-            href="https://twitter.com/jonasschmedtman"
-            >Jonas Schmedtmann</a
-          >. Use for learning or your portfolio. Don't use to teach. Don't claim
-          as your own.
+            href="https://twitter.com/thefaks_officia"
+            >Fakolujo Micheal</a  
+          >
+          <a
+            class="twitter-link"
+            target="_blank"
+            href="https://x.com/Eben_Akinseinde"
+            >& Eben Akindeinde</a
         </p>
       </div>
 
@@ -263,13 +300,13 @@
         <div class="upload__column">
           <h3 class="upload__heading">Recipe data</h3>
           <label>Title</label>
-          <input value="TEST" required name="title" type="text" />
+          <input value="TEST23" required name="title" type="text" />
           <label>URL</label>
-          <input value="TEST" required name="sourceUrl" type="text" />
+          <input value="TEST23" required name="sourceUrl" type="text" />
           <label>Image URL</label>
-          <input value="TEST" required name="image" type="text" />
+          <input value="TEST23" required name="image" type="text" />
           <label>Publisher</label>
-          <input value="TEST" required name="publisher" type="text" />
+          <input value="TEST23" required name="publisher" type="text" />
           <label>Prep time</label>
           <input value="23" required name="cookingTime" type="number" />
           <label>Servings</label>

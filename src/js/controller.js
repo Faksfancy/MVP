@@ -3,7 +3,7 @@ import * as model from './model.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { MODAL_CLOSE_SEC } from './config.js';
-import recipeView from './views/recipeViews.js';
+import recipeView from './views/recipeView.js';
 import searchView from './views/searchView.js';
 import resultView from './views/resultsView.js';
 import paginationView from './views/paginationView.js';
@@ -11,9 +11,12 @@ import bookmarkView from './views/bookmarkView.js';
 import addRecipeView from './views/addRecipeView.js';
 import shopListView from './views/shopListView.js';
 
+//console.log(`test`);
+
 const controlRecipe = async function () {
   try {
     const id = window.location.hash.slice(1);
+    // console.log(id);
 
     if (!id) return;
     recipeView.renderSpinner();
@@ -23,6 +26,7 @@ const controlRecipe = async function () {
     await model.loadRecipe(id);
 
     //rendering recipe
+    //   console.log(model.state.recipe);
     recipeView.render(model.state.recipe);
 
     bookmarkView.update(model.state.bookmarks);
@@ -76,7 +80,7 @@ const controlAddRecipe = async function (newRecipe) {
   try {
     addRecipeView.renderSpinner();
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
+    //console.log(model.state.recipe);
 
     recipeView.render(model.state.recipe);
 
@@ -89,7 +93,7 @@ const controlAddRecipe = async function (newRecipe) {
       addRecipeView.toggleWindow();
     }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
-    console.error(`|*`, err);
+    //console.error(`|*`, err);
     addRecipeView._renderMarkupError(err.message);
   }
 };
@@ -100,12 +104,12 @@ const controlBookmark = function () {
 const controlShopList = async function () {
   try {
     const id = window.location.hash.slice(1);
-    console.log(id);
+    //console.log(id);
 
     if (!id) return;
     await model.loadRecipe(id);
 
-    console.log(model.state.recipe);
+    //console.log(model.state.recipe);
     shopListView.render(model.state.recipe);
   } catch (error) {}
 };

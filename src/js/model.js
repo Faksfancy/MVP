@@ -1,3 +1,4 @@
+import { async } from 'regenerator-runtime';
 import { API_URL, RES_PER_PAGE, KEY } from '../js/config.js';
 //import { getJSON, sendJSON } from '../js/helpers.js';
 import { AJAX } from '../js/helpers.js';
@@ -56,7 +57,7 @@ export const loadSearchResult = async function (query) {
     //    console.log(state.search.result);
     state.search.page = 1;
   } catch (err) {
-    console.error(`${err} 🛑🛑🛑🛑🛑`);
+    //console.error(`${err} 🛑🛑🛑🛑🛑`);
     throw err;
   }
 };
